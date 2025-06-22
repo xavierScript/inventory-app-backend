@@ -12,7 +12,10 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:3000", // Frontend URL
+    origin: [
+      "http://localhost:3000",
+      "https://inventory-app-frontend-nu.vercel.app",
+    ], // Frontend URL
     credentials: true,
   })
 );
